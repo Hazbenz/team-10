@@ -106,6 +106,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Action.html" />
+    <Content Include="evalute.html" />
+    <Content Include="home.html" />
     <Content Include="images\container_img.jpg" />
     <Content Include="images\container_top_back.jpg" />
     <Content Include="favicon.ico" />
@@ -115,7 +118,9 @@
     <Content Include="images\more_btn.gif" />
     <Content Include="images\submenu_bottom.gif" />
     <Content Include="login.html" />
-    <Content Include="home.html" />
+    <Content Include="Onboard.html" />
+    <Content Include="recommendations.html" />
+    <Content Include="report.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\calendar_us.js" />
@@ -123,6 +128,7 @@
     <Content Include="scripts\JSFunctions.js" />
     <Content Include="scripts\JSModal-Message.js" />
     <Content Include="scripts\JSTheme.js" />
+    <Content Include="star.html" />
     <Content Include="stylesheet\calendar.css" />
     <Content Include="stylesheet\color_green_style.css" />
     <Content Include="stylesheet\fix_tag.css" />
