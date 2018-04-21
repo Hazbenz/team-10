@@ -6,6 +6,7 @@ import simplejson
 import MySQLdb
 import pandas  as pd
 from pandas import DataFrame
+from fuzzywuzzy import fuzz
 from fuzzywuzzy import process 
 import 
 
@@ -23,34 +24,42 @@ def index():
 
 @app.route('/matching_algo/{id}', methods = ['GET'])
 def matchingAlgo():
-	request = requests.get('httos://frenzbook.com/getRecommentdations');
+	request = requests.get('https://frenzbook.com/getRecommentdations');
 	data = simplejson.loads(request)
 
-	members = getMember(data)
-	buddies = getBuddies(members)
-	matches = fuzzywuzzy(buddies)
+	member = getMember(data)
+	buddies = getUser(member)
+	matches = fuzzywuzzy(member,buddies)
+
+	return matches
 
 
-def getMember(data)
-	member.setInterest = data.getInterest()
-	member.setLocation = data.getLocation()
-	member.setPersonality = data.getPersonality()
-	member.setSchedule = data.getSchedule()
-	member.setExperience = data.getExperience()
+def getMember(input)
+	data = getUser(input)
+	for user in data:
+		member.setGender(user.getGender())
+		member.setGenderPreference(user.getGenderPreference())
+		member.setAge(user.getAge())
+		member.setInterest(user.getInterest())
+		member.setLocation(user.getLocation())
+		member.setPersonality(user.getPersonality())
+		member.setSchedule(user.getSchedule())
+		member.setExperience(user.getExperience())
+		member.setRoleType(user.getRoleType())
+		member.setSubType(user.getSubType())
 
-	members.add(member)
+		members.add(user)
+	return members
 
- 	return members
 
-
-def getBuddies(members)
+def getUser(members)
 	db = MySQLdb.connect("localhost", "user", "pwd", "default_db")
 	cursor = db.cursor()
-	sql = "select * from users where interest = " member.getInterest " and location = " member.getLocation " and personality =" member.personality 
-			" and schedule = " member.getSchedule " and experience = " member.getExperience 
+	sql = "select id, firstName, lastName, roleType, subType, interest, location, personality, schedule, experience, age, gender, genderPreference, roleType, subType, from users where id = " member.getId " and interest = " member.getInterest " or location = " member.getLocation " or personality =" member.personality 
+			" or schedule = " member.getSchedule " or experience = " member.getExperience 
 	try
 		buddies = cursor.execute(sql)
-		dv.commit()
+		db.commit()
 		
 	except:
 		db.rollback()
@@ -59,8 +68,20 @@ def getBuddies(members)
 	return buddies
 
 
-def fuzzywuzzy(buddies)
-	
+def fuzzywuzzy(member,buddies)
+	for buddy in buddies:
+		addMatch(match, fuzz.ratio(member, buddy))  #Exact Match
+		addMatch(match, fuzz.partial_ratio(member, buddy)) # Ratio - match
+    	addMatch(match, fuzz.token_sort_ratio(member,buddy)) # Partial Ratio - Punctuation
+    	addMatch(match, fuzz.token_setratio(member,buddy))  # Token sort Ratio match
+
+    return matches
+
+def addMatch(match, buddy)
+    if match:
+    		matches.add(match)
+	return matches
+
 
 
 
