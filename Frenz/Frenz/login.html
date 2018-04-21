@@ -1,0 +1,183 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Best Buddies Online
+    </title>
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="StyleSheet/calendar.css" />
+    <link href="StyleSheet/fix_tag.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheet/layout_style.css" rel="stylesheet" type="text/css" />
+    <link id="ctl00_current_color_style" href="StyleSheet/color_green_style.css" rel="stylesheet" type="text/css" />
+    <link id="ctl00_current_font_style" href="StyleSheet/font_normal_style.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheet/layout_style.css" rel="stylesheet" type="text/css" />
+   
+    <script type="text/javascript" language="javascript" src='scripts/JSFunctions.js'></script>
+    <script type="text/javascript" language="javascript" src='scripts/JSModal-Message.js'></script>
+    <script type="text/javascript" language="javascript" src='scripts/JSTheme.js'></script>
+    <script type="text/javascript" language="javascript" src='scripts/calendar_us.js'></script>
+    <script type="text/javascript" language="javascript" src='scripts/JSFunctions.js'></script>
+</head>
+<body>
+
+    <form name="aspnetForm" method="post" action="./default.aspx" id="aspnetForm">
+       
+
+       
+
+      
+
+        <div id="container">
+
+            <div id="inner_container">
+                
+                <div id="topmenu1">
+                    <div id="menuleft">
+                    </div>
+                    <div id="menumid">
+                        <ul id="topmenu" class="dmenu">
+                            <li class="topmenuli home"><a href="login.html">Home</a></li>
+                            
+                            <li class="topmenuli membership" onmouseover="javascript:Show('submenu')" onmouseout="javascript:Hide('submenu')">
+                                <a href="javascript:void(0);" style="display: block" onmouseover="javascript:Show('submenu')"
+                                   onmouseout="javascript:Hide('submenu')">Sign up</a>
+                                <ul class="submenuul" id="submenu">
+                                    <li class="submenunew"><a href="membership.html">Member/Sponsor</a></li>
+                                  
+                                   
+                                </ul>
+                            </li>
+                            <li class="topmenuli contact" style="background: none;">
+                                <a href="contact.html">
+                                    Contact Us
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="menuright">
+                    </div>
+                </div>
+                <div id="bodycontent">
+                    <div class="clear">
+                    </div>
+
+
+                    <div id="leftbody">
+                        <div class="heading">
+                            FrenzBook
+                        </div>
+                        <div>
+                            
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div id="rightbody">
+                        <div class="heading">
+                            Member Login
+                        </div>
+                        <div id="login_box">
+                            <div style="font-size: 10px;">
+                                Approved FrenzBook members can enter their BBO user name and password below
+                                to access their chapter portal.  To become a member, please use the Membership
+                                Application link above to join a chapter.
+                            </div>
+
+                            <a href="#" id="aVSF"></a>
+                            <ul class="ValidationSummry leftalign" id="ValidationSummry" style="padding-left: 25px"></ul>
+                            <span id="ctl00_cphCenter_lblMsg" class="ValidationSummry"></span>
+                            <br />
+                            <br />
+                            <div>
+                                <div class="leftcell rightalign" style="padding-top: 5px; padding-right: 2px;">
+                                    User Name:
+                                </div>
+                                <div class="rightcell">
+                                    <input name="txtUserName" type="text" maxlength="30" id="txtUserName" style="width:150px;" />
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div style="margin-top: 4px;">
+                                <div class="leftcell rightalign" style="padding-top: 5px; padding-right: 2px;">
+                                    Password:
+                                </div>
+                                <div class="rightcell">
+                                    <input name="txtPassword" type="password" maxlength="30" id="txtPassword" style="width:150px;" />
+                                    &nbsp;
+                                    <input type="submit" name="btnLogin" value="Login" onclick="javascript:return ValidateLoginFields();" id="btnLogin" class="btn2" style="height:23px;background-position: top;" />
+                                </div>
+                                <div class="clear">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div style="margin-top: 2px;">
+                                <div class="leftcell">
+                                    &nbsp;
+                                </div>
+                                <div class="rightcell">
+                                    <a href="ForgotPassword.aspx">Forgot your user name/password?</a>
+
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div style="height: 250px;">
+                    </div>
+
+                    <script type="text/javascript" language="javascript">
+       
+
+        function ValidateLoginFields() {
+
+            var prefix = 'ctl00_cphCenter_';
+            var obj = null;
+            var msg = "";
+
+            obj = document.getElementById('txtUserName');
+            if (Trim(obj.value) == "")
+                msg += '<li>Please enter your User Name.</li>';
+
+            obj = document.getElementById('txtPassword');
+            if (Trim(obj.value) == "")
+                msg += '<li>Please enter your Password.</li>';
+
+            return ShowValidationMessages(msg);
+        }
+                    </script>
+
+
+                    <div class="clear">
+                    </div>
+                </div>
+                <div id="footer" class="footertxt" style="padding-top:0; height:70px;">
+                    <div style="float:left; width:65%; text-align: left; padding-left:3%; padding-top:25px;">
+
+                        &copy; 2018
+                       FrenzBook
+                        <br />
+                        <a href="https://www.bestbuddiesonline.org/Privacy.aspx" target="_blank">Privacy Policy</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+
+       
+
+
+    </form>
+</body>
+</html>
+
