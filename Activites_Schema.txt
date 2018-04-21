@@ -1,0 +1,25 @@
+USE [testA]
+GO
+
+/****** Object:  Table [dbo].[Activites]    Script Date: 4/21/2018 4:16:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Activites](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Comments] [varchar](120) NOT NULL,
+	[Feedback] [varchar](120) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Activites]  WITH CHECK ADD CHECK  (([Id]>(0)))
+GO
+
+
