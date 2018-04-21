@@ -1,0 +1,41 @@
+USE [testA]
+GO
+
+/****** Object:  Table [dbo].[USERS]    Script Date: 4/21/2018 4:09:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[USERS](
+	[ID] [int] NOT NULL,
+	[Roletype] [varchar](20) NOT NULL,
+	[Subtype] [varchar](25) NOT NULL,
+	[Interest_Hobbies] [varchar](25) NULL,
+	[Socializine_Style] [varchar](25) NULL,
+	[Preference] [varchar](25) NULL,
+	[Duration] [varchar](25) NULL,
+	[SechedueTime] [varchar](25) NULL,
+	[Commitnment] [varchar](25) NULL,
+	[Language_A] [varchar](25) NULL,
+	[Age] [varchar](25) NULL,
+	[Gender] [varchar](25) NULL,
+        [Gender_Perference] [varchar](255) NULL,
+	[DateOfBirth] [date] NULL,
+	[IDD] [varchar](3) NULL,
+	[Student] [varchar](3) NULL,
+	[Experience] [varchar](10) NULL,
+	[License_Ssn] [varchar](25) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK_Auto1], ENCRYPTION_TYPE = Deterministic, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL,
+	[Mobility] [varchar](25) NULL,
+	[Personality] [varchar](25) NULL,
+	[OnBoarding_Status] [varchar](3) NULL,
+	
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
