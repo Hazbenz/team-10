@@ -34,6 +34,11 @@ Frenzbook is a buddy and volunteer matching system created for BestBuddies.
 - Five tables Used
 - Data input validation
 
+## Technology
+- React
+- Flask / Fuzzywuzzy
+- ElasticSearch Partial Kappa Architecture
+
 ## Matching Logic
 
 - Importing Fuzzywuzzy package in Python
