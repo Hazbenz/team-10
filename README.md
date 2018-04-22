@@ -1,36 +1,36 @@
 
-# Frenzbook Web Application - by Team-10
+# Frenzbook Web Application by Team-10
 
 ## Overview
 
-Frenzbook is a buddy and volunteer matching system created for BestBuddies.
+Frenzbook is a buddy and volunteer matching web application created for Best Buddies International at JPMorgan Chase & Co. April 2018 challenge Code for Good.
 
-## Challenges
+## Challenges Best Buddies facing
 
-- To streamline process
-- To use algorithm-driven matching
-- To ease administration burden
-- To scale easily
+- Streamline managing process
+- Use algorithm-driven matching to replace current manuel matching 
+- Ease administration's time and labor intensive burden
+- Able to scale easily
 
 ## Team Members
 
 - Hasna Benzekri
 - Naishal Gandhi
 - Thenmozhi Muthusamy
- - Palak Patel
+- Palak Patel
 - Li Wang
 
 ## UI
 
-- Sign On/Login
+- Sign On / Login
 - OnBoarding
 - Dashboard
-- Recommendation
- - Matching
+- Recommendations
+- Matching
 
 ## Database
 
-- Environment: MySQL
+- Environment: MySQL, Flask
 - Five tables Used
 - Data input validation
 
@@ -44,7 +44,7 @@ Frenzbook is a buddy and volunteer matching system created for BestBuddies.
 
 - Importing Fuzzywuzzy package in Python
 - Using four types of the fuzzy matching logic:
-Ratio, Partial Ratio, Token Sort Ration, and Token Set Ratio
+  Ratio, Partial Ratio, Token Sort Ration, and Token Set Ratio
 
 ## Integration
 
