@@ -36,6 +36,7 @@ Frenzbook is a buddy and volunteer matching system created for BestBuddies.
 
 ## Technology
 - React
+- Python
 - Flask / Fuzzywuzzy
 - ElasticSearch Partial Kappa Architecture
 
